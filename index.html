@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAQIQAH - Layanan Aqiqah Mudah</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    keyframes: {
+                        float1: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '50%': { transform: 'translate(20px, -20px) rotate(45deg)' }
+                        },
+                        float2: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '50%': { transform: 'translate(-20px, 20px) rotate(-45deg)' }
+                        },
+                        float3: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '50%': { transform: 'translate(15px, 15px) rotate(30deg)' }
+                        },
+                        float4: {
+                            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                            '50%': { transform: 'translate(-15px, -15px) rotate(-30deg)' }
+                        }
+                    },
+                    animation: {
+                        float1: 'float1 15s ease-in-out infinite',
+                        float2: 'float2 18s ease-in-out infinite',
+                        float3: 'float3 20s ease-in-out infinite',
+                        float4: 'float4 22s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-[Inter]">
+    <!-- Header -->
+    <header class="header fixed w-full top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-teal-500">LAQIQAH</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-teal-500">Beranda</a>
+                    <a href="#profile" class="text-gray-600 hover:text-teal-500">Profil</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-teal-500">Harga</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-teal-500">Testimoni</a>
+                    <a href="#contact" class="text-gray-600 hover:text-teal-500">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Layanan Aqiqah Mudah
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                Pusat Aqiqah & Qurban di Kota Serang
+            </p>
+            <a href="#contact" class="btn btn-primary shadow-hover">
+                Hubungi Kami
+            </a>
+        </div>
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-float1"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-white opacity-10 rounded-full animate-float2"></div>
+            <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-white opacity-10 rounded-full animate-float3"></div>
+            <div class="absolute top-1/3 right-1/3 w-12 h-12 bg-white opacity-10 rounded-full animate-float4"></div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Profil Laqiqah</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="bg-white p-8 rounded-lg shadow-hover">
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Laqiqah Farm merupakan sebuah usaha yang bergerak di bidang produk dan jasa penyediaan kambing dan domba beserta jasa pemotongan, pengolahan, pengantaran dan penyaluran serta menerima pesanan paket nasi box untuk kebutuhan aqiqah, qurban, khitan, nazar atau kebutuhan lainnya.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Didirikan sejak tahun 2017 dan didukung oleh tenaga-tenaga professional di bidangnya dan berakhlak islami.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="bg-teal-50 p-6 rounded-lg mb-4">
+                            <i class="fas fa-star text-4xl text-teal-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Visi</h3>
+                        <p class="text-gray-600">
+                            Menjadi perusahaan jasa aqiqah dan qurban yang Amanah, Profesional, dan Penuh Berkah.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-teal-50 p-6 rounded-lg mb-4">
+                            <i class="fas fa-bullseye text-4xl text-teal-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Misi</h3>
+                        <ul class="text-gray-600 text-left space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-teal-500 mr-2"></i>
+                                Menyiapkan tenaga yang professional dan amanah
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-teal-500 mr-2"></i>
+                                Melaksanakan proses aqiqah secara syar'i
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-teal-500 mr-2"></i>
+                                Memberikan pelayanan yang mudah
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="py-20 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="relative">
+                <!-- Slider Container -->
+                <div id="imageSlider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full px-4">
+                        <div class="relative rounded-lg overflow-hidden group">
+                            <img src="https://images.pexels.com/photos/2255459/pexels-photo-2255459.jpeg" alt="Aqiqah 1" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-white text-center p-6 transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                                    <p class="text-lg mb-4">عَنْ سَمُرَةَ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ كُلُّ غُلَامٍ رَهِينَةٌ بِعَقِيقَتِهِ تُذْبَحُ عَنْهُ يَوْمَ سَابِعِهِ وَيُحْلَقُ وَيُسَمَّى</p>
+                                    <p class="text-sm italic">"Setiap anak tergadai dengan aqiqahnya yang disembelih pada hari ketujuh (kelahirannya), dicukur rambutnya dan diberi nama." (HR. Abu Dawud)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full px-4">
+                        <div class="relative rounded-lg overflow-hidden group">
+                            <img src="https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg" alt="Aqiqah 2" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-white text-center p-6 transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                                    <p class="text-lg mb-4">مَنْ وُلِدَ لَهُ وَلَدٌ فَأَحَبَّ أَنْ يَنْسُكَ عَنْهُ فَلْيَنْسُكْ عَنْ الْغُلَامِ شَاتَانِ مُكَافِئَتَانِ وَعَنْ الْجَارِيَةِ شَاةٌ</p>
+                                    <p class="text-sm italic">"Barangsiapa yang dikaruniai seorang anak, lalu ia ingin berkurban untuk anaknya, maka untuk anak laki-laki (disembelih) dua ekor kambing yang sama dan untuk anak perempuan satu ekor kambing." (HR. Abu Dawud)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="min-w-full px-4">
+                        <div class="relative rounded-lg overflow-hidden group">
+                            <img src="https://images.pexels.com/photos/162801/sheep-lamb-lambs-young-162801.jpeg" alt="Aqiqah 3" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="text-white text-center p-6 transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                                    <p class="text-lg mb-4">الْغُلاَمُ مُرْتَهَنٌ بِعَقِيقَتِهِ، يُذْبَحُ عَنْهُ يَوْمَ السَّابِعِ، وَيُسَمَّى فِيهِ، وَيُحْلَقُ رَأْسُهُ</p>
+                                    <p class="text-sm italic">"Seorang anak tergadai dengan aqiqahnya, disembelih pada hari ketujuh, diberi nama, dan dicukur rambutnya." (HR. Tirmidzi)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <button id="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-teal-500 text-white p-3 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-500 text-white p-3 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Mengapa Memilih Kami?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center">
+                    <div class="bg-teal-50 p-6 rounded-lg mb-4 shadow-hover">
+                        <i class="fas fa-user-tie text-4xl text-teal-500"></i>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Profesional</h3>
+                        <p class="text-gray-600">
+                            Dikelola oleh para alumni Fakultas peternakan UNPAD, IPB, dan UGM
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="text-center">
+                    <div class="bg-teal-50 p-6 rounded-lg mb-4 shadow-hover">
+                        <i class="fas fa-certificate text-4xl text-teal-500"></i>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Berkualitas</h3>
+                        <p class="text-gray-600">
+                            Ternak sesuai Syarat dan Syar'i
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="text-center">
+                    <div class="bg-teal-50 p-6 rounded-lg mb-4 shadow-hover">
+                        <i class="fas fa-camera text-4xl text-teal-500"></i>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Dokumentasi</h3>
+                        <p class="text-gray-600">
+                            Mendapatkan foto penyembelihan hewan Aqiqah
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="text-center">
+                    <div class="bg-teal-50 p-6 rounded-lg mb-4 shadow-hover">
+                        <i class="fas fa-wallet text-4xl text-teal-500"></i>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Pembayaran Mudah</h3>
+                        <p class="text-gray-600">
+                            Bayar langsung atau transfer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Daftar Harga</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Paket Kambing -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Paket Kambing</h3>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-teal-500 text-white">
+                                    <th class="py-4 px-6 text-left">Paket</th>
+                                    <th class="py-4 px-6 text-right">Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6">Paket A (50 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 3.500.000</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6">Paket B (70 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 4.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6">Paket C (100 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 4.500.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Paket Domba -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Paket Domba</h3>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-teal-500 text-white">
+                                    <th class="py-4 px-6 text-left">Paket</th>
+                                    <th class="py-4 px-6 text-right">Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6">Paket A (50 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 4.000.000</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6">Paket B (70 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 4.500.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6">Paket C (100 Box)</td>
+                                    <td class="py-4 px-6 text-right">Rp 5.000.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Testimoni</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ahmad</h4>
+                            <p class="text-gray-500 text-sm">Serang</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Pelayanannya sangat memuaskan, hewan yang disediakan sesuai syariat dan prosesnya cepat."
+                    </p>
+                    <div class="flex text-teal-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                            F
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Fatimah</h4>
+                            <p class="text-gray-500 text-sm">Cilegon</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Alhamdulillah, aqiqah anak saya berjalan lancar. Tim sangat profesional dan amanah."
+                    </p>
+                    <div class="flex text-teal-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Muhammad</h4>
+                            <p class="text-gray-500 text-sm">Pandeglang</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "Proses aqiqah sesuai syariat, dokumentasi lengkap, dan pelayanan ramah. Terima kasih Laqiqah."
+                    </p>
+                    <div class="flex text-teal-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-teal-600">Hubungi Kami</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Nama</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-teal-500" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-teal-500" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-teal-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition duration-300">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-600 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">LAQIQAH</h3>
+                    <p class="text-teal-100">
+                        Layanan Aqiqah Profesional dan Terpercaya di Kota Serang
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Kontak</h3>
+                    <p class="text-teal-100">
+                        <i class="fas fa-phone mr-2"></i> 081809215757
+                    </p>
+                    <p class="text-teal-100">
+                        <i class="fas fa-envelope mr-2"></i> info@laqiqah.com
+                    </p>
+                    <p class="text-teal-100">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Jl. Raya Serang No. 123
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-teal-100 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-teal-100 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-teal-100 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-teal-500 mt-8 pt-8 text-center text-teal-100">
+                <p>&copy; 2024 LAQIQAH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/081809215757" class="whatsapp-float bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to a server
+                alert('Terima kasih! Pesan Anda telah terkirim.');
+                contactForm.reset();
+            });
+        }
+
+        // Image Slider
+        const slider = document.getElementById('imageSlider');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 5000);
+    </script>
+</body>
+</html
